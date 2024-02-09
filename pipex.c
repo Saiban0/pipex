@@ -6,7 +6,7 @@
 /*   By: bchedru <bchedru@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:06:02 by bchedru           #+#    #+#             */
-/*   Updated: 2024/01/30 14:45:40 by bchedru          ###   ########.fr       */
+/*   Updated: 2024/02/09 10:12:43 by bchedru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	main(int ac, char **av, char **envp)
 	pid = fork();
 	if (pid == -1)
 		exit(-1);
-	if (!pid)
+	if (pid == 0)
 		child(av, p_fd, envp);
 	parent(av, p_fd, envp);
 }
